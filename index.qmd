@@ -1,0 +1,20 @@
+---
+title: "What The Heck Is a P-Value?"
+subtitle: "And How Not To Abuse It"
+author: "Russ Zaliznyak <[rzaliznyak@gmail.com](mailto:rzaliznyak@gmail.com)>"
+date: "2024-11-23"
+execute:
+  echo: false
+format: 
+  html: 
+    css: style.css
+    toc: true
+    toc-expand: true
+    toc-indent: 1em
+jupyter: python3
+---
+
+
+# Introduction
+
+If you've ever run an A/B test, you've probably encountered terms like _Statistical Significance_ and _p-values_.
