@@ -17,4 +17,8 @@ jupyter: python3
 
 # Introduction
 
-If you've ever run an A/B test, you've probably encountered terms like _Statistical Significance_ and _p-values_.
+If you’ve ever conducted an A/B test, you’ve encountered p-values. Understanding p-values is crucial for accurately interpreting your test results. Let’s define key terms that will enable us to understand the role of p-values in A/B testing.
+
+# The Null Hypothesis: A Stake In the Ground
+
+You can think of the null hypothesis as sticking a stake in the ground and declaring, "This is where we stand."
