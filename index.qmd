@@ -30,11 +30,6 @@ The _**Null Hypothesis**_ represents our current beliefs of the truth. You can t
 - Example #1: Defendent did not steal the loaf of broad
 - Example #2: Website A performs exactly like Website B
 
-
-### **Significance Test**: Our Claim Is On Trial
-
-A Significance Test is like a jury trial. During this test, we collect and weigh the evidence to decide whether to reject or retain our _**Null Hypothesis**_.
-
 ### **Alternative Hypothesis**: What Are the Charges?
 
 Think of the _**Alternative Hypothesis**_ as the charges our defendent is facing. If we collect enough evidence to reject the _Null_, the _Alternative_ becomes our new working theory.
@@ -42,20 +37,33 @@ Think of the _**Alternative Hypothesis**_ as the charges our defendent is facing
 - Example #1: Defendent stole the loaf of bread
 - Example #2: Website A and Website B perform differently
 
+
+### **Significance Test**: Our Claim Is On Trial
+
+A Significance Test is like a jury trial. During the test, we collect and weigh the evidence to decide whether to reject or retain our _**Null Hypothesis**_.
+
+
+### **P-value**: The Strength of the Evidence
+
+The p-value measures how surprising our evidence is, assuming our Null Hypothesis is true. It's like a measure of how shocked the jury would be if the defendant were actually innocent.
+
+**Jury Shocked**: A small p-value means our evidence is unexpected given an innocent defendant.<br>
+**Jury unimpressed**: A large p-value means our evidence is expected given an innocent defendant.
+
+
 ### **Statistical Significance**: Guilty!
 
-Our trial has concluded and the evidence shows that our _Null Hypothesis_ is unreasonable. The jury declares our result _**Statistically Significanct**_ and we are forced to reject the _Null_, while accepting the _Alternative_ as true.
+Our trial has concluded and the evidence shows that our _Null Hypothesis_ is unreasonable given the unexpected evidence. The jury declares our result _**Statistically Significanct**_ and we are forced to reject the _Null_, while accepting the _Alternative_ as true.
 
 - Example 1: Defendent is guilty of stealing the loaf of bread
 - Example 2: Website A and Website B are guilty of performing differently
 
-### **P-value**: A Measure of Reasonableness
+_We use our p-value to determine whether to declare our Null as unreasonable or not!_
 
-Once our evidence is collected and analyzed, how do we know if our _Null Hypothesis_ is unreasonable?
-For this definition, we must be more precise than our previous terms.
 
-_**P-Value**_: Assuming the _Null Hypothesis_ is true, what's the chance of seeing our evidence (or more extreme)?
+## Expected vs Unexpected Results
 
-In order to build our intuition for this definition, we're going to simulate conversion events from two absolutely identical websites. If you haven't already, check out our previous paper on [**The Power of Data Simulation**](https://rzaliznyak-math.github.io/random){target="_blank"}.
+We just learned that in order for our A/B experiments to declare two websites **A** and **B** different, our experiment needs to show that the result was sufficiently **unexpected**; assuming the two websites are actually identical.
 
-## Example: Website A vs Website A
+_**But how do we know when a result is unexpected?**_<br>
+_**In other words, how do we get a low p-value?!**_ 

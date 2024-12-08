@@ -53,12 +53,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a>
   <ul class="collapse">
   <li><a href="#null-hypothesis-assumption-of-innocence" id="toc-null-hypothesis-assumption-of-innocence" class="nav-link" data-scroll-target="#null-hypothesis-assumption-of-innocence"><strong>Null Hypothesis</strong>: Assumption of Innocence</a></li>
-  <li><a href="#significance-test-our-claim-is-on-trial" id="toc-significance-test-our-claim-is-on-trial" class="nav-link" data-scroll-target="#significance-test-our-claim-is-on-trial"><strong>Significance Test</strong>: Our Claim Is On Trial</a></li>
   <li><a href="#alternative-hypothesis-what-are-the-charges" id="toc-alternative-hypothesis-what-are-the-charges" class="nav-link" data-scroll-target="#alternative-hypothesis-what-are-the-charges"><strong>Alternative Hypothesis</strong>: What Are the Charges?</a></li>
+  <li><a href="#significance-test-our-claim-is-on-trial" id="toc-significance-test-our-claim-is-on-trial" class="nav-link" data-scroll-target="#significance-test-our-claim-is-on-trial"><strong>Significance Test</strong>: Our Claim Is On Trial</a></li>
+  <li><a href="#p-value-the-strength-of-the-evidence" id="toc-p-value-the-strength-of-the-evidence" class="nav-link" data-scroll-target="#p-value-the-strength-of-the-evidence"><strong>P-value</strong>: The Strength of the Evidence</a></li>
   <li><a href="#statistical-significance-guilty" id="toc-statistical-significance-guilty" class="nav-link" data-scroll-target="#statistical-significance-guilty"><strong>Statistical Significance</strong>: Guilty!</a></li>
-  <li><a href="#p-value-a-measure-of-reasonableness" id="toc-p-value-a-measure-of-reasonableness" class="nav-link" data-scroll-target="#p-value-a-measure-of-reasonableness"><strong>P-value</strong>: A Measure of Reasonableness</a></li>
   </ul></li>
-  <li><a href="#example-website-a-vs-website-a" id="toc-example-website-a-vs-website-a" class="nav-link" data-scroll-target="#example-website-a-vs-website-a">Example: Website A vs Website A</a></li>
+  <li><a href="#expected-vs-unexpected-results" id="toc-expected-vs-unexpected-results" class="nav-link" data-scroll-target="#expected-vs-unexpected-results">Expected vs Unexpected Results</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -111,10 +111,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Example #2: Website A performs exactly like Website B</li>
 </ul>
 </section>
-<section id="significance-test-our-claim-is-on-trial" class="level3">
-<h3 class="anchored" data-anchor-id="significance-test-our-claim-is-on-trial"><strong>Significance Test</strong>: Our Claim Is On Trial</h3>
-<p>A Significance Test is like a jury trial. During this test, we collect and weigh the evidence to decide whether to reject or retain our <em><strong>Null Hypothesis</strong></em>.</p>
-</section>
 <section id="alternative-hypothesis-what-are-the-charges" class="level3">
 <h3 class="anchored" data-anchor-id="alternative-hypothesis-what-are-the-charges"><strong>Alternative Hypothesis</strong>: What Are the Charges?</h3>
 <p>Think of the <em><strong>Alternative Hypothesis</strong></em> as the charges our defendent is facing. If we collect enough evidence to reject the <em>Null</em>, the <em>Alternative</em> becomes our new working theory.</p>
@@ -123,23 +119,29 @@ ul.task-list li input[type="checkbox"] {
 <li>Example #2: Website A and Website B perform differently</li>
 </ul>
 </section>
+<section id="significance-test-our-claim-is-on-trial" class="level3">
+<h3 class="anchored" data-anchor-id="significance-test-our-claim-is-on-trial"><strong>Significance Test</strong>: Our Claim Is On Trial</h3>
+<p>A Significance Test is like a jury trial. During the test, we collect and weigh the evidence to decide whether to reject or retain our <em><strong>Null Hypothesis</strong></em>.</p>
+</section>
+<section id="p-value-the-strength-of-the-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="p-value-the-strength-of-the-evidence"><strong>P-value</strong>: The Strength of the Evidence</h3>
+<p>The p-value measures how surprising our evidence is, assuming our Null Hypothesis is true. It’s like a measure of how shocked the jury would be if the defendant were actually innocent.</p>
+<p><strong>Jury Shocked</strong>: A small p-value means our evidence is unexpected given an innocent defendant.<br> <strong>Jury unimpressed</strong>: A large p-value means our evidence is expected given an innocent defendant.</p>
+</section>
 <section id="statistical-significance-guilty" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-significance-guilty"><strong>Statistical Significance</strong>: Guilty!</h3>
-<p>Our trial has concluded and the evidence shows that our <em>Null Hypothesis</em> is unreasonable. The jury declares our result <em><strong>Statistically Significanct</strong></em> and we are forced to reject the <em>Null</em>, while accepting the <em>Alternative</em> as true.</p>
+<p>Our trial has concluded and the evidence shows that our <em>Null Hypothesis</em> is unreasonable given the unexpected evidence. The jury declares our result <em><strong>Statistically Significanct</strong></em> and we are forced to reject the <em>Null</em>, while accepting the <em>Alternative</em> as true.</p>
 <ul>
 <li>Example 1: Defendent is guilty of stealing the loaf of bread</li>
 <li>Example 2: Website A and Website B are guilty of performing differently</li>
 </ul>
-</section>
-<section id="p-value-a-measure-of-reasonableness" class="level3">
-<h3 class="anchored" data-anchor-id="p-value-a-measure-of-reasonableness"><strong>P-value</strong>: A Measure of Reasonableness</h3>
-<p>Once our evidence is collected and analyzed, how do we know if our <em>Null Hypothesis</em> is unreasonable? For this definition, we must be more precise than our previous terms.</p>
-<p><em><strong>P-Value</strong></em>: Assuming the <em>Null Hypothesis</em> is true, what’s the chance of seeing our evidence (or more extreme)?</p>
-<p>In order to build our intuition for this definition, we’re going to simulate conversion events from two absolutely identical websites. If you haven’t already, check out our previous paper on <a href="https://rzaliznyak-math.github.io/random" target="_blank"><strong>The Power of Data Simulation</strong></a>.</p>
+<p><em>We use our p-value to determine whether to declare our Null as unreasonable or not!</em></p>
 </section>
 </section>
-<section id="example-website-a-vs-website-a" class="level2">
-<h2 class="anchored" data-anchor-id="example-website-a-vs-website-a">Example: Website A vs Website A</h2>
+<section id="expected-vs-unexpected-results" class="level2">
+<h2 class="anchored" data-anchor-id="expected-vs-unexpected-results">Expected vs Unexpected Results</h2>
+<p>We just learned that in order for our A/B experiments to declare two websites <strong>A</strong> and <strong>B</strong> different, our experiment needs to show that the result was sufficiently <strong>unexpected</strong>; assuming the two websites are actually identical.</p>
+<p><em><strong>But how do we know when a result is unexpected?</strong></em><br> <em><strong>In other words, how do we get a low p-value?!</strong></em></p>
 </section>
 </section>
 
